@@ -1,0 +1,12 @@
+.tabBar{
+	position: fixed;
+	top:100px;
+	left:0;
+	right:0;
+	z-index: 2000;
+}
+
+.tabbd{
+	height:100%;
+}
+

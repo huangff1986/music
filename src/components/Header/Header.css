@@ -1,0 +1,168 @@
+.container{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	height:100px;
+	background-color: #d43c33;
+	z-index: 2001;
+}
+
+.microphone {
+	position: absolute;
+	top:20px;
+	left:24px;
+	width:60px;
+	height: 60px;
+	opacity:1;
+	transition: all 0.2s;
+}
+
+.microphone--show{
+	composes: microphone;
+	opacity:0;
+}
+
+.player {
+	position: absolute;
+	top:20px;
+	right:24px;
+	width:60px;
+	height:60px;
+	opacity:1;
+	transition: all 0.2s;
+}
+
+.player--show {
+	composes:player;
+	opacity:0;
+}
+
+.cancel{
+	position: absolute;
+	top:20px;
+	right:-80px;
+	width:60px;
+	height:60px;
+	width:80px;
+	color:#fff;
+	text-align: center;
+	line-height: 60px;
+	font-size: 36px;
+	transition: all 0.2s;
+}
+
+.cancel--show {
+	composes:cancel;
+	right:24px;
+}
+
+.search {
+	display: flex;
+	position: absolute;
+	top: 15px;
+	bottom: 15px;
+	left: 120px;
+	right: 120px;
+	transition: all 0.2s;
+}
+
+
+.search--show {
+	composes: search;
+	left:24px;
+	right: 110px;
+}
+
+.search__input {
+	width:100%;
+	text-indent: 60px;
+	color:#333;
+	border:none;
+	border-radius: 999px;
+}
+
+.search__close {
+	position: absolute;
+	top:20px;
+	right:20px;
+	width:30px;
+	height:30px;
+	z-index: 1;
+}
+
+.search__icon {
+	position: absolute;
+	top:20px;
+	left:30px;
+	width:30px;
+	height:30px;
+	z-index: 1;
+}
+
+
+.search__panel {
+	display: none;
+	position: fixed;
+	top:100px;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color: #fff;
+	transition: all 2s;
+	opacity:0;
+}
+
+.search__panel--show {
+	composes:search__panel;
+	display: block;
+	opacity:1;
+}
+
+.panel__singer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:100px;
+	color:#333;
+	font-size: 36px;
+	line-height: 36px;
+	border-bottom:1px solid #ccc;
+}
+
+.panel__singer__icon1 {
+	margin-right:10px;
+	width:40px;
+	height:40px;
+}
+
+.panel__singer__icon2 {
+	width:30px;
+	height:30px;
+}
+
+.panel__hotkey{
+	padding:32px;
+}
+
+.hotkey__title{
+	margin:0;
+	font-size: 28px;
+	color:#333;
+	font-weight: normal;
+}
+
+.hotkey__list{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.hotkey__item {
+	float: left;
+	margin:20px 20px 0 0;
+	padding:15px 35px;
+	border:1px solid #ccc;
+	border-radius: 40px;
+}
+
