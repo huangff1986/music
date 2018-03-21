@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import {connect} from 'dva';
+import { withRouter } from "dva/router";
 import style from './MusicPanel.css';
 
 class MusicPanel extends Component {
@@ -9,10 +10,7 @@ class MusicPanel extends Component {
 	}
 
 	handleBackClick() {	
-		this.props.musicPanel.goBack();
-		this.props.dispatch({
-			type: 'app/closeMusicPanel'
-		})
+		window.history.back();
 	}
 
 	render() {

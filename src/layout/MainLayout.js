@@ -10,7 +10,7 @@ class MainLayout extends Component {
 	}
 	render(){
 		return (
-			<div className={ this.props.isHidden ? `${style.container} ${style.hidden}` : `${style.container}`}>
+			<div className={ this.props.isShow ? `${style.container}` : `${style.container} ${style.hidden}`}>
 				{this.props.children}
 				<Footer/>
 			</div>
@@ -25,7 +25,7 @@ MainLayout.propTypes = {
 
 function mapStateToProps(state) {
 	return {
-		isHidden: state.app.isLayoutHidden
+		isShow: state.app.layout.isShow
 	}
 }
 

@@ -4,7 +4,9 @@ export default {
   namespace: 'app',
 
   state: {
-    isLayoutHidden: false,
+    layout: {
+      isShow: true,
+    },
     musicPanel: {
       isOpen: false
     }
@@ -28,13 +30,17 @@ export default {
     showLayout(state, action) {
       return {
         ...state,
-        isLayoutHidden: false
+        layout: {
+          isShow: true,
+        }
       }
     },
     hiddenLayout(state, action) {
       return {
         ...state,
-        isLayoutHidden: true
+        layout: {
+          isShow: false,
+        }
       }
     },
     openMusicPanel(state, action){
@@ -42,7 +48,6 @@ export default {
         ...state,
         musicPanel: {
           isOpen: true,
-          goBack: action.payload.goBack
         }
       }
     },
@@ -51,7 +56,6 @@ export default {
         ...state,
         musicPanel: {
           isOpen: false,
-          goBack: null
         }
       }
     }

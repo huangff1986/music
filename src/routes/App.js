@@ -10,6 +10,26 @@ class App extends Component {
 		super(props);
 		console.log(props)
 	}
+	componentWillMount(){
+		this.returnPage();
+	}
+
+	returnPage() {
+		window.onpopstate = (e)=>{
+			// state堆中第一个值为null 也就是代表首页。 这里就不仅关系处理
+			if(e.state == undefined) {return}
+
+			if(e.state == 'goback'){
+				window.history.back();
+			} else {
+				e.state.map((val)=>{
+					this.props.dispatch({
+						type: `app/${val}`
+					})
+				})
+			}
+		}
+	}
 
 	render() {
 		return (

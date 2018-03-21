@@ -21,17 +21,21 @@ class Find extends Component {
   openMusicPanel() {
     this.props.dispatch({
       type: 'app/openMusicPanel',
-      payload: {
-        goBack: ()=>{this.props.dispatch({
-          type: 'app/showLayout'
-        })}
-      }
     })
   }
 
   onPlayerClick() {
     this.hiddenLayout();
     this.openMusicPanel();
+    window.history.pushState(['showLayout','closeMusicPanel'],'','')
+    window.history.pushState('','','')
+    // window.history.pushState(['abc','bbc'],'','')
+
+    // window.history.pushState(['a2','b2'],'','')
+    // window.history.pushState(['a3','b3'],'','')
+
+    // setTimeout(()=>{console.log(window.history.state)},1000)
+    
   }
 
   render() {
@@ -47,4 +51,4 @@ class Find extends Component {
 }
 
 
-export default withRouter(connect()(Find));
+export default withRouter(connect((state)=>(state))(Find));
