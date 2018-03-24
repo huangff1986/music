@@ -1,0 +1,47 @@
+.container{
+	display: flex;
+	align-items: center ;
+	justify-content:space-around;
+	height:100px;
+	color:#fff;
+}
+
+.progress, .totalTime {
+	font-size: 24px;
+}
+
+.progress {
+	width:70%;
+	height:5px;
+	border-radius: 9px;
+	background-color: rgba(255,255,255,0.4);
+}
+
+.played{
+	position: relative;
+	height:100%;
+	width:0;
+	background-color: #d43c33;
+}
+
+.played::before{
+	content: '';
+	position: absolute;
+	right:-15px;
+	top:-12px;
+	width:30px;
+	height:30px;
+	border-radius: 999px;
+	background-color: #fff;
+}
+
+.played::after{
+	content: '';
+	position: absolute;
+	right:-4px;
+	top:-2px;
+	width:8px;
+	height:8px;
+	border-radius: 999px;
+	background-color: #d43c33;
+}

@@ -38,8 +38,8 @@ class App extends Component {
 					<ReactCSSTransitionGroup
 						transitionName='pageAnimation'
 						component='div'
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
+            			transitionEnterTimeout={300}
+            			transitionLeaveTimeout={300}
 					>
 						{this.props.musicPanel.isOpen && <MusicPanel/> }
 					</ReactCSSTransitionGroup>
@@ -55,7 +55,8 @@ App.propTypes = {
 
 function mapStateToProps(state) {
 	return {
-		musicPanel: state.app.musicPanel
+		musicPanel: state.app.musicPanel,
+		musicList: state.musicPlayer.musicList
 	}
 }
 
